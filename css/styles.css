@@ -1,0 +1,71 @@
+.ArvoText {
+	font-family: 'Arvo', serif;
+}
+
+.PTSansText {
+	font-family: 'PT Sans', serif;
+}
+
+.main {
+	padding-bottom:100px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #00274c;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #00274c;
+}
+
+.graytext {
+	color:#888;
+}
+
+.navbar {
+	margin:0;
+}
+.header {
+	background-color:#00274c;
+	color:#fff;
+}
+
+.graybackground {
+	background-color:#ebebeb;
+}
+
+.img-responsive {
+ display: block;
+ height: auto;
+ max-width: 100%;
+}
+
+#viewImportantInfo {
+	font-size:1.2em;
+	border: thin solid #E0E0E0;
+}
+
+
+
+.blackborder {
+	border:1px solid #000;
+}
+
+
+.yellow-background {
+  background-color:#ffcb05;
+} 
+
+.btn-collapse:before {
+    font-family:'FontAwesome';
+    content: '\f078';
+	float: right;
+	color: #666;
+	padding-top: 2px;
+	padding-left: 6px;
+}
+.btn-collapse.collapsed:before {
+	content: '\f054';
+}

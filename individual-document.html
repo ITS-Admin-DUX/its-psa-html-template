@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Document Title</title>
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<!-- font awesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+<!-- Custom css -->
+<link href="css/step-by-step.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Arvo|PT+Sans' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> 
+<![endif]-->
+
+</head>
+
+<body>
+
+<!-- Start of Navigation bar. Includes default Wolverine Access logo, default menu options of My Linc, Wolverine Access and ITS--> 
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header"> 
+        	<img class="navbar-brand" src="images/wolverine-access-logo.png" alt="Wolverine Access">
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#document-navbar-collapse">
+            	<span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div  id="document-navbar-collapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://maislinc.umich.edu">My LINC</a></li>
+                <li><a href="http://wolverineaccess.umich.edu">Wolverine Access</a></li>
+                <li><a href="http://its.umich.edu">ITS</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End of Navigation bar -->
+<!-- Start of blue title bar -->
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="ArvoText text-center">Document Title</h1>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- End of blue title bar -->
+
+
+<main id="content">
+    <div class="container-fluid">
+
+<!-- Start Overview Section -->
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Overview</h2>
+                <p>This is the text in the overview section</p>
+            </div>
+        </div>
+<!-- End Overview Section -->
+
+
+<!-- Start gray bar navigation section -->        
+        <div class="row graybackground">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Navigation</h2>
+                <p>NavBar &gt; Navigator &gt; </p>
+              
+            </div>
+        </div>
+<!-- End gray bar navigation section -->
+
+        
+<!-- Start Step-by-Step Section -->
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                
+            <!-- Start of Screenshot on/off switch -->
+            <div id="switch-screenshots" class="pull-right"><label for="switch-screenshots">Screenshots:</label> <input type="checkbox" name="switch-screenshots"></div>
+            <!-- End of Screenshot on/off switch -->
+                
+                <h2>Step-by-Step Process</h2> 
+					<ol>
+                    	<li>Start of the process steps.</li>
+                        <li>Next step with screenshot link.<br>
+       				<!-- Start collapsable screenshot -->
+                        <p><a href="javascript:void()" title="empty link for keyboard access to screenshot toggle" data-toggle="collapse" data-target="#screenshot-1" aria-expanded="false" aria-controls="screenshot-1">View screenshot</a></p>
+                        <div id="screenshot-1" class="collapse">
+                                <p><img src="images/image.png" alt="Description of image" class="img-responsive"></p>
+                        </div>
+       				<!-- End collapsable screenshot --> 
+               		</ol>
+
+ 
+<!-- If procedure involves multiple steps or it's likely the user will need to return to a wrapper, or continue to another page, add in the following line:
+				<p>Return to (wrapper) to (action).</p>
+-- END sample text -->
+
+            </div>
+        </div>
+<!-- End step-by-step section -->
+
+    </div>
+</main>
+
+
+<!-- Start footer -->
+<footer class="footer navbar-default">
+    <div class="container">
+        <p class="text-muted navbar-text">&copy; 2018 Regents of the University of Michigan | <a href="http://its.umich.edu/" target="_blank">ITS</a> </p>
+		<p class="text-muted navbar-text pull-right">Last Modified: Jan. 2, 2018</p>
+    </div>
+</footer>
+<!-- End footer -->
+
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<!-- The following coding is required to make the screenshot on/off toggle button function -->
+<script src="js/bootstrap-switch.min.js"></script>
+<script>
+$(document).ready(function() {
+// Toggle switch for screenshots
+$('input[name="switch-screenshots"]').bootstrapSwitch({size:'mini'}).on('switchChange.bootstrapSwitch', function(event, state) {
+if (state == true) {
+$('div[id^="screenshot"]').collapse('show');
+$('a[data-toggle="collapse"]').hide();  
+} else if (state == false) {
+$('div[id^="screenshot"]').collapse('hide');
+$('a[data-toggle="collapse"]').show();  
+}
+});	
+});
+</script>
+<!-- End code for screenshot on/off toggle -->
+
+
+
+</body>
+</html>

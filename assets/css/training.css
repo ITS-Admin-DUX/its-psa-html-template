@@ -1,0 +1,86 @@
+/* CSS Document */
+
+@import url(//fonts.googleapis.com/css?family=Roboto:400,300,500,700,900);
+@import url(//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
+html {
+	font-size: 1em;	
+}
+body {
+	font-size: 1em;
+	margin-top: 60px;
+}
+.navbar-brand {
+	padding-top: 6px;
+}
+main {
+	font-family: 'Roboto', sans-serif;
+}
+
+section h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+}
+.panel-default>.panel-heading  {
+	background-color: #ececec !important;	
+}
+.panel-title {
+	font-family: 'Roboto', sans-serif;
+	color: #555;
+	font-size: 1rem;
+	font-weight: 500;
+}
+.panel-heading {
+	cursor: pointer;
+}
+.list-group-item {
+	color: #555 !important;
+	font-size: 1rem;
+}
+/*
+.badge {
+	margin-left: .7rem;
+	font-weight: normal !important;
+	display: inline-block;
+	min-width: 10px;
+	padding: 3px 7px;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	color: #777 !important;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	background-color: #ececec !important;
+	border-radius: 11px;
+	border: 1px solid #777;
+}
+*/
+.panel-default>.panel-heading .badge {
+	margin-left: .5rem;
+	background-color: #999;
+}
+.padding-0 {
+	padding: 0;	
+}
+/*
+.panel-heading:before {
+    font-family:'FontAwesome';
+    content: "\f078";
+	float: right;
+	color: #777;
+	padding-top: 3px;
+}
+.panel-heading.collapsed:before {
+	content: "\f054";
+}
+*/
+a:hover {
+	text-decoration: none;	
+}
+.text-center {
+	text-align: center;
+}

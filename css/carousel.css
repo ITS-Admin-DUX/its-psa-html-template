@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+h2 {
+    font-size: 1.8em;
+    color: #00274c;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #00274c;
+}
+
+.ArvoText {
+	font-family: 'Arvo', serif;
+}
+
+.PTSansText {
+	font-family: 'PT Sans', serif;
+}
+
+.main {
+	padding-bottom:100px;
+}
+
+/*medium+ screen sizes*/
+@media (min-width:992px) {
+    .desktop-only {
+        display:block !important;
+    }
+	.mobile-only {
+		display:none !important;
+	}
+}
+ 
+/*small screen sizes*/
+@media (max-width: 991px) {
+    .mobile-only {
+        display:block !important;
+    }
+ 
+    .desktop-only {
+        display:none !important;
+    }
+}
+
+.graytext {
+	color:#888;
+}
+
+.navbar {
+	margin:0;
+}
+
+.semi-trans {
+background-color:rgba(0,0,0,0.65);
+}
+
+.pic-background {
+	color:#fff;
+	background:#fff url(../images/diag-1024.jpg) no-repeat center center;
+	background-size:cover;
+	margin:0;
+	padding:500px 0 100px 0;
+}
+
+.background-mobile {
+	background-color:#00274c;
+	color:#fff;
+}
+
+.blue-background {
+	background-color:#00274c;
+}
+.graybackground {
+	background-color:#ebebeb;
+}
+
+#viewImportantInfo {
+	font-size:1.2em;
+	border: thin solid #E0E0E0;
+}
+
+
+
+.blackborder {
+	border:1px solid #000;
+}
+
+
+.yellow-background {
+  background-color:#ffcb05;
+} 
+
+.btn-collapse:before {
+    font-family:'FontAwesome';
+    content: '\f078';
+	float: right;
+	color: #666;
+	padding-top: 2px;
+	padding-left: 6px;
+}
+.btn-collapse.collapsed:before {
+	content: '\f054';
+}
+
+.pager {
+	font-size:1.5em;
+}
+
+.carousel-indicators {
+  bottom:-30px;
+
+}
+.carousel-indicators li {
+  background-color: #CCC;
+}
+.carousel-indicators .active {
+  background-color: #4777b1;
+}
+
