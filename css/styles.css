@@ -1,23 +1,43 @@
-.ArvoText {
-	font-family: 'Arvo', serif;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+.ArvoText,
 .PTSansText {
-	font-family: 'PT Sans', serif;
+	font-family: 'Roboto', sans-serif;
 }
 
+html, 
+body, 
+div, 
+p, 
+li, 
+ul {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em; 
+	color: #333;
+	line-height: 1.618;
+}
+
+a, 
+a:visited, 
+a:active {
+	color: #3344DD;
+}
 .main {
 	padding-bottom:100px;
 }
 
+h1 {
+	font-size: 2.25em; /* 36px */
+	color: #fff;
+}
+
 h2 {
-    font-size: 1.8em;
-    color: #00274c;
+    font-size: 1.5em; /* 24px */
+    color: #00274C;
 }
 
 h3 {
-    font-size: 1.3em;
-    color: #00274c;
+    font-size: 1.125em; /* 18px */
+    color: #40658F;
 }
 
 .graytext {

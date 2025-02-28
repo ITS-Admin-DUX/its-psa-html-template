@@ -1,12 +1,51 @@
 @charset "utf-8";
 /* CSS Document */
 
-.ArvoText {
-	font-family: 'Arvo', serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+.ArvoText,
+.PTSansText {
+	font-family: 'Roboto', sans-serif;
 }
 
-.PTSansText {
-	font-family: 'PT Sans', serif;
+html, 
+body, 
+div, 
+p, 
+li, 
+ul {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em; 
+	color: #333;
+	line-height: 1.618;
+}
+
+a, 
+a:visited, 
+a:active {
+	color: #3344DD;
+}
+
+.main {
+	padding-bottom:100px;
+}
+
+h1 {
+	font-size: 2.25em; /* 36px */
+	color: #fff;
+}
+
+h2 {
+    font-size: 1.5em; /* 24px */
+    color: #00274C;
+	
+	margin: 40px 0;
+	text-shadow: 0 1px 0 #fff;
+	border-bottom: 1px solid #ddd;
+}
+
+h3 {
+    font-size: 1.125em; /* 18px */
+    color: #40658F;
 }
 
 body {
@@ -96,16 +135,6 @@ footer {
 	color: #00274c;
 	text-shadow: 0 1px 0 #fff;
 }
-
-h2 {
-	margin: 40px 0;
-	font-size: 36px;
-	color: #999;
-	color: #767676;
-	text-shadow: 0 1px 0 #fff;
-	border-bottom: 1px solid #ddd;
-}
-
 
 .hr-header {
 	background-color:#00274c;
