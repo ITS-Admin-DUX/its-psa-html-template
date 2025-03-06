@@ -42,8 +42,21 @@ h3 {
 }
 
 
-#content {
-	padding-bottom:100px;
+main {
+    padding-bottom:6em;
+}
+
+main ul, main ol {
+    margin-bottom:2em;
+}
+main ul ul, main ul ol, main ol ol, main ol ul {
+    margin-bottom:0;
+}
+main li ul li, main li ol li {
+    margin-top:0.125em;
+}
+main ol > li {
+    margin-bottom:1.25em;
 }
 
 .graytext {
@@ -102,7 +115,7 @@ body {
 }
 
 #switch-screenshots {
-margin-top: 20px;	
+    margin-top: 20px;
 }
 
 a:hover {
