@@ -101,12 +101,50 @@
 					<ol>
                     	<li>Start of the process steps.</li>
                         <li>Next step with screenshot link.<br>
-       				<!-- Start collapsable screenshot -->
-                        <p><a href="javascript:void()" title="empty link for keyboard access to screenshot toggle" tabindex="0" data-toggle="collapse" data-target="#screenshot-1" aria-expanded="false" aria-controls="screenshot-1">View screenshot</a></p>
-                        <div id="screenshot-1" class="collapse">
-                                <p><img src="images/image.png" alt="Description of image" class="img-responsive"></p>
+                        <!-- Start collapsable screenshot -->
+                            <p><a href="javascript:void()" title="empty link for keyboard access to screenshot toggle" tabindex="0" role="button" data-toggle="collapse" data-target="#screenshot-1" aria-expanded="false" aria-controls="screenshot-1">View screenshot</a></p>
+                            <div id="screenshot-1" class="collapse">
+                                    <p><img src="images/image.png" alt="Description of image" class="img-responsive"></p>
+                            </div>
+                        <!-- End collapsable screenshot -->
+                        </li>
+                        <li>Select the tab you wish to personsalize (i.e., <strong>My Work</strong>, <strong>Links</strong>, <strong>Queries, Reports/Processes</strong>).</li>
+                        <!-- ADD THE FOLLOWING FOR A SCREENSHOT-->
+
+                        <p><a data-toggle="collapse" data-target="#screenshot-2" tabindex="0" role="button" aria-expanded="false" aria-controls="screenshot-1"> Personalize Screenshot</a></p>
+                        <div id="screenshot-2" class="collapse">
+                            <p><img src="images/TL_DU_WCPersonalize2.png" alt="Screenshot for steps 1-2" class="img-responsive"></p>
                         </div>
-       				<!-- End collapsable screenshot --> 
+                        <!-- END SCREENSHOT CODE-->
+                        <li>For the <strong>My Work</strong> tab, options include:
+                            <ul>
+                                <li>Select if My Work Grouplet is collapsed on start.</li>
+                                <li>Select if a group is collapsed on start.</li>
+                                <li>Select preferred starting page.</li>
+                                <li>Select if you would like counts for each category to show.</li>
+                                <li>If options are not changed, the system default remains. </li>
+                            </ul>
+                        </li>
+                        <li>For the Links, Queries, and Report/Processes tab:
+                            <br>
+                            <strong>Note:</strong> The steps below highlight the <strong>Links</strong> tab. Follow similar steps to personalize the <strong>Queries</strong> tab and <strong>Report/Processes</strong> tab.
+                            <ol>
+                                <li>Click<strong> Add Group</strong>.</li>
+                                <li>Enter a <strong>Group Label</strong>.</li>
+                                <li>Click <strong>Define</strong>.</li>
+                                <li>Select <strong>URL </strong>from the<strong> Link Type</strong> drop-down list.</li>
+                                <li>Enter <strong>URLID</strong>.</li>
+                                <li>If applicable, enter a <strong>Link Label</strong>.</li>
+                                <li>Click <strong>Done</strong>.</li>
+                                <li>Repeat process if adding multiple groups.</li>
+                            </ol>
+                        </li>
+                        <li>Click <strong>Reorder Group</strong> to arrange the order.
+                            <ul>
+                                <li>Drag and drop to arrange the new order</li>
+                            </ul>
+                        </li>
+                        <li>Click <strong>Done</strong>.</li>
                		</ol>
 
  
@@ -125,7 +163,7 @@
 <!-- Start footer -->
 <footer class="footer navbar-default">
     <div class="container">
-        <p class="text-muted navbar-text">&copy; 2018 Regents of the University of Michigan | <a href="http://its.umich.edu/" target="_blank">ITS</a> </p>
+        <p class="text-muted navbar-text">&copy; 2025 Regents of the University of Michigan | <a href="http://its.umich.edu/" target="_blank">ITS</a> </p>
 		<p class="text-muted navbar-text pull-right">Last Modified: Jan. 2, 2018</p>
     </div>
 </footer>
@@ -139,15 +177,34 @@
 <script>
 $(document).ready(function() {
 // Toggle switch for screenshots
-$('input[name="switch-screenshots"]').bootstrapSwitch({size:'mini'}).on('switchChange.bootstrapSwitch', function(event, state) {
-if (state == true) {
-$('div[id^="screenshot"]').collapse('show');
-$('a[data-toggle="collapse"]').hide();  
-} else if (state == false) {
-$('div[id^="screenshot"]').collapse('hide');
-$('a[data-toggle="collapse"]').show();  
-}
-});	
+    $('input[name="switch-screenshots"]').bootstrapSwitch({size:'mini'})
+        .on('switchChange.bootstrapSwitch', function(event, state) {
+            if (state == true) {
+                $('div[id^="screenshot"]').collapse('show');
+                $('a[data-toggle="collapse"]').hide();
+            } else if (state == false) {
+                $('div[id^="screenshot"]').collapse('hide');
+                $('a[data-toggle="collapse"]').show();
+            }
+         });
+
+        $('.bootstrap-switch')
+            .attr('tabindex', 0)
+            .on('keydown', function(e) {
+            if (e.keyCode == 13 || e.keyCode == 32) {
+                $(this).find('input').bootstrapSwitch('toggleState');
+                e.preventDefault();
+                return false;
+            }
+            });
+
+        $('a[data-toggle="collapse"]').on('keydown', function(e) {
+            if (e.keyCode == 13 || e.keyCode == 32) {
+                $(this).click();
+                e.preventDefault();
+                return false;
+            }
+        });
 });
 </script>
 <!-- End code for screenshot on/off toggle -->
