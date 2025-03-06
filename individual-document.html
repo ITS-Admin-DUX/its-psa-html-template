@@ -27,7 +27,7 @@
 
 <body>
 <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+    <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
 </div>
 <!-- Start of Navigation bar. Includes default Wolverine Access logo, default menu options of My Linc, Wolverine Access and ITS--> 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -64,7 +64,8 @@
 <!-- End of blue title bar -->
 
 
-<main id="main-content">
+<main>
+    <a id="main-content"></a>
     <div class="container-fluid">
 
 <!-- Start Overview Section -->
@@ -101,7 +102,7 @@
                     	<li>Start of the process steps.</li>
                         <li>Next step with screenshot link.<br>
        				<!-- Start collapsable screenshot -->
-                        <p><a href="javascript:void()" title="empty link for keyboard access to screenshot toggle" data-toggle="collapse" data-target="#screenshot-1" aria-expanded="false" aria-controls="screenshot-1">View screenshot</a></p>
+                        <p><a href="javascript:void()" title="empty link for keyboard access to screenshot toggle" tabindex="0" data-toggle="collapse" data-target="#screenshot-1" aria-expanded="false" aria-controls="screenshot-1">View screenshot</a></p>
                         <div id="screenshot-1" class="collapse">
                                 <p><img src="images/image.png" alt="Description of image" class="img-responsive"></p>
                         </div>

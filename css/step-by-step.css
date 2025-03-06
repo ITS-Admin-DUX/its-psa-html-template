@@ -109,8 +109,8 @@ a:hover {
 	cursor:pointer;
 }
 
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
+.sr-only.sr-only-focusable:active,
+.sr-only.sr-only-focusable:focus {
     position: fixed !important;
     overflow: visible;
     clip: auto;
