@@ -89,3 +89,20 @@ h3 {
 .btn-collapse.collapsed:before {
 	content: '\f054';
 }
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+	position: fixed !important;
+	overflow: visible;
+	clip: auto;
+	width: auto;
+	height: auto;
+	display: inline;
+	background: #fff;
+	color: #0d57aa;
+	padding: 1em;
+	float: left;
+	z-index: 9999;
+	margin: 1em;
+	border-radius: 10px;
+}
